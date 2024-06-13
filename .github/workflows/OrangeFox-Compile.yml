@@ -112,9 +112,9 @@ jobs:
 
     - name: Check the output directory before uploading
       run: |
+        echo
         cd ${GITHUB_WORKSPACE}/OrangeFox/
         ls -al /fox_${{ github.event.inputs.MANIFEST_BRANCH }}/out/target/product
-        echo
         ls -al /fox_${{ github.event.inputs.MANIFEST_BRANCH }}/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/
 
     - name: Upload to Release
